@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  whoami:
+    image: traefik/whoami
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=loproxy"
+      - "traefik.http.routers.whoami.rule=Host(`whoami.astons.dev`)"
+      - "traefik.http.routers.whoami.tls=true"
+    networks:
+      - loproxy
+
+networks:
+  loproxy:
+    external: true
+
