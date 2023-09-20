@@ -11,7 +11,7 @@ for requirement in $requirements; do
 done
 
 mkcert -install
-mkcert -cert-file certs/astons.dev_cert.pem -key-file certs/astons.dev_key.pem "astons.dev" "*.astons.dev"
+mkcert -cert-file certs/dev.astons.me_cert.pem -key-file certs/dev.astons.me_key.pem "dev.astons.me" "*.dev.astons.me"
 
 if [[ ! $(docker network ls -f name=loproxy -q) ]]; then
   docker network create loproxy

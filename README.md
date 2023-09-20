@@ -15,7 +15,7 @@ services:
       # Set docker network
       - "traefik.docker.network=loproxy"
       # Set service URL
-      - "traefik.http.routers.foobar.rule=Host(`foobar.astons.dev`)"
+      - "traefik.http.routers.foobar.rule=Host(`foobar.dev.astons.me`)"
       # Enable TLS
       - "traefik.http.routers.foobar.tls=true"
       # Set port (if different from 80)

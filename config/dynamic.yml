@@ -1,15 +1,15 @@
 http:
   routers:
     traefik:
-      rule: "Host(`traefik.astons.dev`)"
+      rule: "Host(`traefik.dev.astons.me`)"
       service: "api@internal"
       tls:
         domains:
-          - main: "astons.dev"
+          - main: "dev.astons.me"
             sans:
-              - "*.astons.dev"
+              - "*.dev.astons.me"
 tls:
   certificates:
-    - certFile: "/etc/certs/astons.dev_cert.pem"
-      keyFile: "/etc/certs/astons.dev_key.pem"
+    - certFile: "/etc/certs/dev.astons.me_cert.pem"
+      keyFile: "/etc/certs/dev.astons.me_key.pem"
 
